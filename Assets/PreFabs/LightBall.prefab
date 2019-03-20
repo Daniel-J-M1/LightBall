@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 135648330093628652}
   - component: {fileID: 54298105396539472}
   - component: {fileID: 135107388644915450}
+  - component: {fileID: 114343513005437550}
   m_Layer: 0
   m_Name: LightBall
   m_TagString: Finish
@@ -124,7 +125,7 @@ Rigidbody:
   m_GameObject: {fileID: 1884165299104590}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 2
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -167,6 +168,25 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114343513005437550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1884165299104590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf39d609037fc904bbc0f574aa86e876, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1251197165574112, guid: b992451e912b5884c92ba29b845d8d94, type: 2}
+  Ball: {fileID: 4136920337764286}
+  Blarg: 0
+  Rigid: {fileID: 54298105396539472}
+  Speed: 4
+  ForceAmount: 0
+  NewForce: {x: 5, y: 0, z: 0}
+  Play: {fileID: 0}
 --- !u!135 &135107388644915450
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -7,19 +7,21 @@ public class ItemInteraction : MonoBehaviour {
     public GameObject LightBall;
     public Transform Player;
     public bool Spawned = false;
-    private float Move = 2f;
     private Vector3 SPoint;
+    public Rigidbody Rigid;
 
-	// Use this for initialization
-	void Start () {
-
+    // Use this for initialization
+    void Start () {
+        Rigid = LightBall.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void FixedUpdate () {
 
+        Vector3 Velocity = Rigid.velocity;
+
         //Detailing the position the ball will spawn in.
-        SPoint.y = Player.position.y + 3;
+        SPoint.y = Player.position.y + 1;
         SPoint.z = Player.position.z;
         SPoint.x = Player.position.x;
         //============================================

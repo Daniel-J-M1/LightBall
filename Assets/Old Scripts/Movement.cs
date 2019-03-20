@@ -15,10 +15,13 @@ public class Movement : MonoBehaviour {
     public const float MaxSpeed = 3;
 
 
+
+
     // Use this for initialization.
     void Start () {
         // Gives Rigid Context.
         Rigid = GetComponent<Rigidbody2D>();
+
 	}
 
     // Update is called once per frame.
