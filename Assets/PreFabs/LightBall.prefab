@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 114343513005437550}
   m_Layer: 0
   m_Name: LightBall
-  m_TagString: Finish
+  m_TagString: LightBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,12 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1251197165574112, guid: b992451e912b5884c92ba29b845d8d94, type: 2}
   Ball: {fileID: 4136920337764286}
-  Blarg: 0
   Rigid: {fileID: 54298105396539472}
-  Speed: 4
-  ForceAmount: 0
-  NewForce: {x: 5, y: 0, z: 0}
-  Play: {fileID: 0}
 --- !u!135 &135107388644915450
 SphereCollider:
   m_ObjectHideFlags: 1

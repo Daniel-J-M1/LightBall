@@ -42,7 +42,7 @@ public class ItemInteraction : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-            if (other.transform.tag == "Finish")
+            if (other.transform.tag == "LightBall")
             {
                 Destroy(other.transform.gameObject);
                 Spawned = false;

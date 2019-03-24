@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - MazePlayer
-  - OverviewPlayer
+  - Crate
+  - LightBall
   layers:
   - Default
   - TransparentFX
