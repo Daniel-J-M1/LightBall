@@ -33,6 +33,10 @@ public class FirstPerson : MonoBehaviour {
 
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
             moveDirection = transform.TransformDirection(moveDirection);
+
+            moveDirection.y = 0.0f;
+            moveDirection.Normalize();
+
             moveDirection = moveDirection * speed;
 
             if (Input.GetButton("Jump"))

@@ -36,7 +36,7 @@ public class MoveObject : MonoBehaviour {
 
 
             //Cube.AddForce(transform.forward * Thrust);
-            Cube.velocity = new Vector3(this.transform.forward.x * Thrust, this.transform.forward.y, this.transform.forward.z * Thrust);
+            //Cube.velocity = new Vector3(this.transform.forward.x * Thrust, this.transform.forward.y, this.transform.forward.z * Thrust);
             //.GetAxis("Horizontal") * Speed;
             print("Force: " + Cube);
         }
