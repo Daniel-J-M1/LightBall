@@ -44,9 +44,12 @@ public class ItemInteraction : MonoBehaviour {
     {
             if (other.transform.tag == "LightBall")
             {
-                Destroy(other.transform.gameObject);
-                Spawned = false;
-                print("Collided");
+                //if (Input.GetButtonDown("BallSpawn"))
+                //{
+                    Destroy(other.transform.gameObject);
+                    Spawned = false;
+                    print("Collided");
+                //}
             }
     }
 }
