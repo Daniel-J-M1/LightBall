@@ -39,8 +39,8 @@ GameObject:
   - component: {fileID: 23192421365817804}
   - component: {fileID: 135648330093628652}
   - component: {fileID: 54298105396539472}
-  - component: {fileID: 135107388644915450}
   - component: {fileID: 114343513005437550}
+  - component: {fileID: 135973852902988388}
   m_Layer: 0
   m_Name: LightBall
   m_TagString: LightBall
@@ -55,7 +55,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1884165299104590}
   m_LocalRotation: {x: 0.13381675, y: 0.41061902, z: -0.061062176, w: 0.8998648}
-  m_LocalPosition: {x: -2.9776745, y: 0.18084753, z: -3.6563473}
+  m_LocalPosition: {x: 3.663, y: 1.384, z: -1.478}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4349243945821796}
@@ -182,18 +182,6 @@ MonoBehaviour:
   Player: {fileID: 1251197165574112, guid: b992451e912b5884c92ba29b845d8d94, type: 2}
   Ball: {fileID: 1884165299104590}
   Rigid: {fileID: 54298105396539472}
---- !u!135 &135107388644915450
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1884165299104590}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135648330093628652
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -204,5 +192,17 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135973852902988388
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1884165299104590}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
