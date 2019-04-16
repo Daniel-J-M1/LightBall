@@ -19,7 +19,7 @@ public class PressurePlate : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "LightBall")
+        if (other.transform.tag == "Crate")
         {
             print("In");
             Pressure = true;
@@ -28,7 +28,7 @@ public class PressurePlate : MonoBehaviour {
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform.tag == "LightBall")
+        if (other.transform.tag == "Crate")
         {
             print("Out");
             Pressure = false;
