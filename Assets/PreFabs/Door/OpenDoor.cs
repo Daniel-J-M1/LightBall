@@ -12,7 +12,7 @@ public class OpenDoor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        DoorOpen.x = Position.position.x + 2f;
+        DoorOpen.x = Position.position.x + 5f;
         DoorOpen.y = Position.position.y;
         DoorOpen.z = Position.position.z;
         DoorClose.x = Position.position.x;
