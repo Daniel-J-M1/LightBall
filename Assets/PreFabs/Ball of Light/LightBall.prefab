@@ -70,7 +70,7 @@ Transform:
   m_GameObject: {fileID: 1006466552272148}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 4136920337764286}
   m_RootOrder: 0
@@ -143,7 +143,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 3
-  m_Range: 6
+  m_Range: 8
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
