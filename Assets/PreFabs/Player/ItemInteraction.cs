@@ -50,7 +50,7 @@ public class ItemInteraction : MonoBehaviour {
             {
                 Destroy(SpawnBall);
                 Spawned = false;
-                print("Despawned");
+                print("Despawned" + Spawned);
             }
         }
     }
