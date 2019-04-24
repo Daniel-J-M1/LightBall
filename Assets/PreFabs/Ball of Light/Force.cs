@@ -16,7 +16,7 @@ public class Force : MonoBehaviour {
         Rigid.velocity = new Vector3(this.transform.forward.x* Thrust, this.transform.forward.y * Thrust, this.transform.forward.z * Thrust);
 
 
-        print("Spawned");
+        //print("Spawned");
 
     }
 	

@@ -18,6 +18,7 @@ public class FirstPerson : MonoBehaviour {
     {
         controller = GetComponent<CharacterController>();
 
+
         //
         Axis = gameObject.transform.position;
 
@@ -56,7 +57,7 @@ public class FirstPerson : MonoBehaviour {
 
     // Original Found Here: https://docs.unity3d.com/ScriptReference/CharacterController.Move.html
 
-
+    //Grants Code
     // https://answers.unity.com/questions/17566/how-can-i-make-my-player-a-charactercontroller-pus.html
     void  OnControllerColliderHit(ControllerColliderHit hit)
     {
@@ -83,4 +84,5 @@ public class FirstPerson : MonoBehaviour {
         body.velocity = pushDir * push_power;
 
     }
+    //==================================================
 }

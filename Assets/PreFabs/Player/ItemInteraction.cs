@@ -8,13 +8,17 @@ public class ItemInteraction : MonoBehaviour {
     private GameObject SpawnBall;
     public Transform Player;
     public bool Spawned = false;
-    private bool Coll = false;
+    public bool Coll = false;
     private Vector3 SPoint;
     public Rigidbody Rigid;
+
+    BoxRespawn Area;
 
     // Use this for initialization
     void Start () {
         Rigid = LightBall.GetComponent<Rigidbody>();
+
+        Area = FindObjectOfType<BoxRespawn>();
     }
 
     // Update is called once per frame
@@ -36,13 +40,13 @@ public class ItemInteraction : MonoBehaviour {
             {
                 Instantiate(LightBall, SPoint, Player.rotation);
                 Spawned = true;
-                print("Spawned");
+                //print("Spawned");
             }
             //======================
-
-
         }
         //============================================
+
+        Coll = Area.GetComponent<BoxRespawn>().Spawn;
 
         if (Input.GetButtonDown("Despawn"))
         {
@@ -50,7 +54,7 @@ public class ItemInteraction : MonoBehaviour {
             {
                 Destroy(SpawnBall);
                 Spawned = false;
-                print("Despawned" + Spawned);
+                //print("Despawned" + Spawned);
             }
         }
     }
@@ -61,14 +65,8 @@ public class ItemInteraction : MonoBehaviour {
         {
             SpawnBall = other.transform.gameObject;
             Coll = true;
-            print("Coll: " + Coll);
-            print("Collided");
-
-            //Destroy(other.transform.gameObject);
-            //Spawned = false;
+            //print("Coll: " + Coll);
             //print("Collided");
-
-
         }
     }
 
@@ -77,7 +75,7 @@ public class ItemInteraction : MonoBehaviour {
         if (other.transform.tag == "LightBall")
         {
             Coll = false;
-            print("Coll: " + Coll);
+            //print("Coll: " + Coll);
         }
     }
 }

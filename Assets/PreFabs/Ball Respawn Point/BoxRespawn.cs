@@ -5,7 +5,6 @@ using UnityEngine;
 public class BoxRespawn : MonoBehaviour {
 
     public bool Spawn;
-    public GameObject Character;
 
     ItemInteraction Ball;
 
@@ -18,12 +17,25 @@ public class BoxRespawn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Spawn = Ball.GetComponent<ItemInteraction>().Spawned;
-        print("Ball" + Spawn);
+        Spawn = Ball.GetComponent<ItemInteraction>().Coll;
+        //print("Ball" + Spawn);
+    }
 
-        if (Input.GetButtonDown("Despawn"))
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "Respawn")
+        {
+            Spawn = true;
+            print("In");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.tag == "Respawn")
         {
             Spawn = false;
+            print("Out");
         }
     }
 }
