@@ -38,9 +38,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4449864747517698}
   - component: {fileID: 65439237439997732}
+  - component: {fileID: 114337826596453154}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,7 +108,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4001812381078402}
-  - component: {fileID: 114063831824156564}
   m_Layer: 0
   m_Name: BallRespawn
   m_TagString: Respawn
@@ -122,7 +122,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1783814189141082}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0.70710677, w: 0}
-  m_LocalPosition: {x: -10.062, y: 4.008, z: 43.757}
+  m_LocalPosition: {x: -0.53, y: 0, z: 2.424}
   m_LocalScale: {x: 0.5205629, y: 0.36790746, z: 0.0016308681}
   m_Children:
   - {fileID: 4449864747517698}
@@ -166,7 +166,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1133926441407166}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -5.44, y: -4.28, z: -326}
+  m_LocalPosition: {x: -5.44, y: -4.28, z: -1107}
   m_LocalScale: {x: 653.1469, y: 3.5522335, z: 2.8968508}
   m_Children: []
   m_Father: {fileID: 4001812381078402}
@@ -385,7 +385,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1133926441407166}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -426,12 +426,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114063831824156564
+--- !u!114 &114337826596453154
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1783814189141082}
+  m_GameObject: {fileID: 1133926441407166}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81a77cc2251b24d4896a9f3605241c78, type: 3}

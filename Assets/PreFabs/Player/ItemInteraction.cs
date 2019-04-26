@@ -38,7 +38,8 @@ public class ItemInteraction : MonoBehaviour {
             //Checks to see if the ball is already spawned.
             if (Spawned == false)
             {
-                Instantiate(LightBall, SPoint, Player.rotation);
+                //Instantiate(LightBall, SPoint, Player.rotation);
+                SpawnBall = Instantiate(LightBall, SPoint, Player.rotation);
                 Spawned = true;
                 //print("Spawned");
             }
@@ -63,10 +64,13 @@ public class ItemInteraction : MonoBehaviour {
     {
         if (other.transform.tag == "LightBall")
         {
-            SpawnBall = other.transform.gameObject;
             Coll = true;
-            //print("Coll: " + Coll);
-            //print("Collided");
+        }
+
+        if (other.transform.tag == "Respawn")
+        {
+            Coll = true;
+            print("Entered");
         }
     }
 
@@ -75,7 +79,11 @@ public class ItemInteraction : MonoBehaviour {
         if (other.transform.tag == "LightBall")
         {
             Coll = false;
-            //print("Coll: " + Coll);
+        }
+
+        if (other.transform.tag == "Respawn")
+        {
+            Coll = false;
         }
     }
 }

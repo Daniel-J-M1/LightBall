@@ -32,7 +32,7 @@ public class OpenDoor : MonoBehaviour {
         else
         {
             Position.position = DoorClose;
-            print("Closed");
+            //print("Closed");
         }
 
     }
