@@ -179,10 +179,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf39d609037fc904bbc0f574aa86e876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1251197165574112, guid: b992451e912b5884c92ba29b845d8d94, type: 2}
+  Player: {fileID: 1861260333510294, guid: 6aceb4c952ced4b469c1b6448266402f, type: 2}
   Ball: {fileID: 1884165299104590}
   Rigid: {fileID: 54298105396539472}
   Thrust: 10
+  UpForce: 10
 --- !u!135 &135648330093628652
 SphereCollider:
   m_ObjectHideFlags: 1
