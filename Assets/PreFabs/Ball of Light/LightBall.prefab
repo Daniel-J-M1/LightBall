@@ -143,7 +143,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 3
-  m_Range: 8
+  m_Range: 5
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -182,6 +182,7 @@ MonoBehaviour:
   Player: {fileID: 1251197165574112, guid: b992451e912b5884c92ba29b845d8d94, type: 2}
   Ball: {fileID: 1884165299104590}
   Rigid: {fileID: 54298105396539472}
+  Thrust: 10
 --- !u!135 &135648330093628652
 SphereCollider:
   m_ObjectHideFlags: 1
