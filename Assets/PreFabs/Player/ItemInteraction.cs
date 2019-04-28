@@ -12,13 +12,13 @@ public class ItemInteraction : MonoBehaviour {
     private Vector3 SPoint;
     public Rigidbody Rigid;
 
-    BoxRespawn Area;
+    //BoxRespawn Area;
 
     // Use this for initialization
     void Start () {
         Rigid = LightBall.GetComponent<Rigidbody>();
 
-        Area = FindObjectOfType<BoxRespawn>();
+        //Area = FindObjectOfType<BoxRespawn>();
     }
 
     // Update is called once per frame
@@ -47,7 +47,7 @@ public class ItemInteraction : MonoBehaviour {
         }
         //============================================
 
-        Coll = Area.GetComponent<BoxRespawn>().Spawn;
+        //Coll = Area.GetComponent<BoxRespawn>().Spawn;
 
         if (Input.GetButtonDown("Despawn"))
         {

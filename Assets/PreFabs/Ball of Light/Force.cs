@@ -7,13 +7,14 @@ public class Force : MonoBehaviour {
     public GameObject Player;
     public GameObject Ball;
     public Rigidbody Rigid;
-    public float Thrust = 10;
+    public float Thrust = 20;
+    public float UpForce = 10;
 
 	// Use this for initialization
 	void Start () {
         Rigid = GetComponent<Rigidbody>();
 
-        Rigid.velocity = new Vector3(this.transform.forward.x* Thrust, this.transform.forward.y * Thrust, this.transform.forward.z * Thrust);
+        Rigid.velocity = new Vector3(this.transform.forward.x* Thrust, this.transform.forward.y * UpForce, this.transform.forward.z * Thrust);
 
 
         //print("Spawned");
