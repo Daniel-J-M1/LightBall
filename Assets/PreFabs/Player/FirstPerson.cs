@@ -12,14 +12,12 @@ public class FirstPerson : MonoBehaviour {
     private Vector3 Axis;
 
     private Vector3 moveDirection = Vector3.zero;
-    private CharacterController controller;
+    private CharacterController Controller;
 
     void Start()
     {
-        controller = GetComponent<CharacterController>();
+        Controller = GetComponent<CharacterController>();
 
-
-        //
         Axis = gameObject.transform.position;
 
         //// let the gameObject fall down
@@ -28,10 +26,10 @@ public class FirstPerson : MonoBehaviour {
 
     void Update()
     {
-        if (controller.isGrounded)
+        if (Controller.isGrounded)
         {
             // We are grounded, so recalculate
-            // move direction directly from axes
+            // Move direction directly from axes
 
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
             moveDirection = transform.TransformDirection(moveDirection);
@@ -52,37 +50,33 @@ public class FirstPerson : MonoBehaviour {
         moveDirection.y = moveDirection.y - (gravity * Time.deltaTime);
 
         // Move the controller
-        controller.Move(moveDirection * Time.deltaTime);
+        Controller.Move(moveDirection * Time.deltaTime);
     }
 
-    // Original Found Here: https://docs.unity3d.com/ScriptReference/CharacterController.Move.html
+    // Original Code Found Here: https://docs.unity3d.com/ScriptReference/CharacterController.Move.html
 
-    //Grants Code
-    // https://answers.unity.com/questions/17566/how-can-i-make-my-player-a-charactercontroller-pus.html
     void  OnControllerColliderHit(ControllerColliderHit hit)
     {
         Rigidbody body = hit.collider.attachedRigidbody;
 
-
-        // no rigidbody
+        // Checks to see if there is no rigidbody
         if (body == null || body.isKinematic)
         {
             return;
         }
 
-        // We dont want to push objects below us
+        // Ensures object is not pushed down when hit from above
         if (hit.moveDirection.y < -0.3)
         {
             return;
         }
-        // Calculate push direction from move direction,
-        // we only push objects to the sides never up and down
+
+        //Calculate the direction the charcter is hitting the object at on the X and Z axis, so it is not pushed up or down.
         Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
-        // If you know how fast your character is trying to move,
-        // then you can also multiply the push velocity by that.
-        // Apply the push
+
+        // Push the object by the speed of the character hitting the object times the push power variable.
         body.velocity = pushDir * push_power;
 
     }
-    //==================================================
+    //Original Code Found Here: https://answers.unity.com/questions/17566/how-can-i-make-my-player-a-charactercontroller-pus.html
 }

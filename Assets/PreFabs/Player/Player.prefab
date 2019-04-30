@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114396492738815240}
   - component: {fileID: 114598563641143300}
   - component: {fileID: 54180988969802684}
+  - component: {fileID: 114810100834291420}
   m_Layer: 0
   m_Name: Player
   m_TagString: MainCamera
@@ -118,6 +119,7 @@ MonoBehaviour:
   LightBall: {fileID: 1884165299104590, guid: 2d6ed0a0a9c5acc4999299a119dedace, type: 2}
   Player: {fileID: 4043980349149136}
   Spawned: 0
+  Coll: 0
   Rigid: {fileID: 0}
 --- !u!114 &114458682647510234
 MonoBehaviour:
@@ -153,6 +155,18 @@ MonoBehaviour:
   jumpSpeed: 8
   gravity: 20
   push_power: 10
+--- !u!114 &114810100834291420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1861260333510294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 6ff315a3ceb192747a65427113fee8c7, type: 2}
 --- !u!143 &143102350293535086
 CharacterController:
   m_ObjectHideFlags: 1

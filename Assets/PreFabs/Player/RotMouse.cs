@@ -61,8 +61,10 @@ public class RotMouse : MonoBehaviour {
             rotAverageY /= rotArrayY.Count;
             rotAverageX /= rotArrayX.Count;
 
+            //Limits the rotation of the camera
             rotAverageY = ClampAngle(rotAverageY, minimumY, maximumY);
             rotAverageX = ClampAngle(rotAverageX, minimumX, maximumX);
+            //====================
 
             Quaternion yQuaternion = Quaternion.AngleAxis(rotAverageY, Vector3.left);
             Quaternion xQuaternion = Quaternion.AngleAxis(rotAverageX, Vector3.up);
@@ -116,12 +118,14 @@ public class RotMouse : MonoBehaviour {
             transform.localRotation = originalRotation * yQuaternion;
         }
 
+        //Hides the Cursor
         if (Input.GetMouseButtonDown(0))
         {
             Cursor.visible = false;
         }
     }
 
+    //Locks the Cursor in the middle of the screen and hides it
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
@@ -132,7 +136,9 @@ public class RotMouse : MonoBehaviour {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
+    //==================
 
+    //Sets the limit to the rotation of the camera.
     public static float ClampAngle(float angle, float min, float max)
     {
         angle = angle % 360;
@@ -149,6 +155,7 @@ public class RotMouse : MonoBehaviour {
         }
         return Mathf.Clamp(angle, min, max);
     }
+    //========================
 
     // Found Here: http://wiki.unity3d.com/index.php/SmoothMouseLook
 }

@@ -7,18 +7,16 @@ public class ItemInteraction : MonoBehaviour {
     public GameObject LightBall;
     private GameObject SpawnBall;
     public Transform Player;
+
     public bool Spawned = false;
     public bool Coll = false;
+
     private Vector3 SPoint;
     public Rigidbody Rigid;
-
-    //BoxRespawn Area;
 
     // Use this for initialization
     void Start () {
         Rigid = LightBall.GetComponent<Rigidbody>();
-
-        //Area = FindObjectOfType<BoxRespawn>();
     }
 
     // Update is called once per frame
@@ -38,52 +36,63 @@ public class ItemInteraction : MonoBehaviour {
             //Checks to see if the ball is already spawned.
             if (Spawned == false)
             {
-                //Instantiate(LightBall, SPoint, Player.rotation);
+                //Spawns a Lightball and sets it to be referenced by the GameObject "SpawnBall".
                 SpawnBall = Instantiate(LightBall, SPoint, Player.rotation);
+                //=============================
                 Spawned = true;
-                //print("Spawned");
             }
             //======================
         }
         //============================================
 
-        //Coll = Area.GetComponent<BoxRespawn>().Spawn;
-
+        //Checks to see if the "Despawn" button is pressed
         if (Input.GetButtonDown("Despawn"))
         {
             if (Coll == true)
             {
+                //If the boolean is true, destroy the spawned Lightball
                 Destroy(SpawnBall);
+                //=============================
                 Spawned = false;
-                //print("Despawned" + Spawned);
             }
         }
+        //=============================
     }
 
+    //Checks to see if an object has entered the collision box on the player
     void OnTriggerEnter(Collider other)
     {
+        //Check to see if the object has the tag "LightBall".
         if (other.transform.tag == "LightBall")
         {
             Coll = true;
         }
+        //=============================
 
+        //Check to see if the object has the tag "Respawn".
         if (other.transform.tag == "Respawn")
         {
             Coll = true;
-            print("Entered");
         }
+        //=============================
     }
 
+    //Checks to see if an object has entered the collision box on the player
     private void OnTriggerExit(Collider other)
     {
+        //Check to see if the object has the tag "LightBall".
         if (other.transform.tag == "LightBall")
         {
             Coll = false;
         }
+        //=============================
 
+        //Check to see if the object has the tag "Respawn".
         if (other.transform.tag == "Respawn")
         {
             Coll = false;
         }
+        //=============================
     }
+    //=============================
 }

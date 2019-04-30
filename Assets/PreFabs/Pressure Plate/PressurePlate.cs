@@ -6,33 +6,31 @@ public class PressurePlate : MonoBehaviour {
 
     public bool Pressure = false;
 
-
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 
     private void OnTriggerEnter(Collider other)
     {
+        //Checks to see if an object with the "Crate" tag has entered the collision box.
         if (other.transform.tag == "Crate")
         {
-            print("In");
             Pressure = true;
-            print("Pressure: " + Pressure);
         }
+        //=============================
     }
+
     private void OnTriggerExit(Collider other)
     {
+        //Checks to see if an object with the "Crate" tag has exited the collision box.
         if (other.transform.tag == "Crate")
         {
-            print("Out");
             Pressure = false;
-            print("Pressure: " + Pressure);
         }
+        //=============================
     }
 }
